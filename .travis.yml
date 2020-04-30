@@ -4,9 +4,8 @@ services:
   - docker
 # 2- which images
 before_install: 
-  - docker built -t rgazeri320/react-docker -f Dockerfile.dev .
+  - docker build -t rgazeri320/react-docker -f Dockerfile.dev .
 
 script: 
   - docker run rgazeri320/react-docker npm run test -- --coverage      
 
-  
